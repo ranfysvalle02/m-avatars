@@ -1,5 +1,7 @@
 # m-avatars
 
+[![parity](https://github.com/ranfysvalle02/m-avatars/actions/workflows/parity.yml/badge.svg)](https://github.com/ranfysvalle02/m-avatars/actions/workflows/parity.yml) ![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen) ![languages](https://img.shields.io/badge/ports-Python%20%7C%20Go%20%7C%20JavaScript-blue) [![license: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+
 **One melody, many instruments.** Deterministic, symmetric pixel avatars from any name. The same face comes out of Python, Go, and JavaScript, down to the byte.
 
 <p>
