@@ -1,0 +1,107 @@
+{
+  "spec": "m-avatars/1",
+  "vectors": [
+    {
+      "seed": "captain-pixel", "size": 5, "density": 52,
+      "note": "the handshake",
+      "palette": [[0, 0, 94], [147, 65, 56], [292, 75, 60]],
+      "grid": ["00100", "01110", "12121", "12021", "01210"]
+    },
+    {
+      "seed": "  Captain-PIXEL\t", "size": 5, "density": 52,
+      "note": "ASCII whitespace is trimmed and A-Z folded: same sheet as the handshake",
+      "palette": [[0, 0, 94], [147, 65, 56], [292, 75, 60]],
+      "grid": ["00100", "01110", "12121", "12021", "01210"]
+    },
+    {
+      "seed": "mary-had-a-little-lamb", "size": 7, "density": 50,
+      "note": "a bigger canvas",
+      "palette": [[0, 0, 94], [89, 65, 56], [234, 75, 60]],
+      "grid": ["1201021", "2012102", "0110110", "0120210", "0010100", "0200020", "1110111"]
+    },
+    {
+      "seed": "ranfysvalle02", "size": 9, "density": 48,
+      "note": "an odd size with a center column",
+      "palette": [[0, 0, 94], [241, 65, 56], [26, 75, 60]],
+      "grid": ["110101011", "102101201", "210020012", "021000120", "101101101", "020101020", "101111101", "012000210", "201020102"]
+    },
+    {
+      "seed": "even-steven", "size": 6, "density": 60,
+      "note": "an even size with no center column",
+      "palette": [[0, 0, 94], [185, 65, 56], [330, 75, 60]],
+      "grid": ["111111", "101101", "011110", "011110", "200002", "001100"]
+    },
+    {
+      "seed": "mongodb", "size": 11, "density": 45,
+      "note": "a giant shield",
+      "palette": [[0, 0, 94], [17, 65, 56], [162, 75, 60]],
+      "grid": ["02001110020", "20010001002", "11110201111", "01000100010", "20011011002", "11001010011", "10111211101", "10010001001", "00002120000", "01001210010", "00101110100"]
+    },
+    {
+      "seed": "x", "size": 1, "density": 100,
+      "note": "the smallest possible sheet",
+      "palette": [[0, 0, 94], [249, 65, 56], [34, 75, 60]],
+      "grid": ["2"]
+    },
+    {
+      "seed": "nobody", "size": 5, "density": 0,
+      "note": "density 0 gives a blank grid but still draws a palette",
+      "palette": [[0, 0, 94], [332, 65, 56], [117, 75, 60]],
+      "grid": ["00000", "00000", "00000", "00000", "00000"]
+    },
+    {
+      "seed": "", "size": 5, "density": 52,
+      "note": "an empty seed hashes to the FNV offset basis",
+      "palette": [[0, 0, 94], [119, 65, 56], [264, 75, 60]],
+      "grid": ["21112", "01010", "11111", "11211", "00100"]
+    },
+    {
+      "seed": "z-n7paa'", "size": 5, "density": 52,
+      "note": "FNV-1a hashes this to exactly 0, so the 0x6D2B79F5 fallback kicks in",
+      "palette": [[0, 0, 94], [183, 65, 56], [328, 75, 60]],
+      "grid": ["00000", "01110", "00200", "00000", "10101"]
+    },
+    {
+      "seed": "İstanbul", "size": 5, "density": 52,
+      "note": "non-ASCII bytes are hashed as-is (Go ToLower gives 'i', Python/JS give 'i̇')",
+      "palette": [[0, 0, 94], [258, 65, 56], [43, 75, 60]],
+      "grid": ["11011", "12221", "21012", "00000", "11211"]
+    },
+    {
+      "seed": "ΣΑΣ", "size": 5, "density": 52,
+      "note": "no Unicode case folding (Go gives final σ, Python/JS give ς)",
+      "palette": [[0, 0, 94], [121, 65, 56], [266, 75, 60]],
+      "grid": ["02120", "00000", "00000", "01010", "00100"]
+    },
+    {
+      "seed": "﻿bom", "size": 5, "density": 52,
+      "note": "U+FEFF is not trimmed (JS trim() would strip it)",
+      "palette": [[0, 0, 94], [224, 65, 56], [9, 75, 60]],
+      "grid": ["00000", "02120", "00100", "21212", "10001"]
+    },
+    {
+      "seed": "\u001cfs\u001c", "size": 5, "density": 52,
+      "note": "U+001C is not trimmed (Python strip() would strip it)",
+      "palette": [[0, 0, 94], [338, 65, 56], [123, 75, 60]],
+      "grid": ["00200", "10101", "00000", "01010", "11011"]
+    },
+    {
+      "seed": "Straße 🦙", "size": 8, "density": 55,
+      "note": "multi-byte UTF-8 passes through untouched",
+      "palette": [[0, 0, 94], [215, 65, 56], [0, 75, 60]],
+      "grid": ["20000002", "12011021", "00011000", "00011000", "02022020", "11211211", "10222201", "10200201"]
+    },
+    {
+      "seed": "İlkay", "size": 5, "density": 52,
+      "note": "the original v0 Go and Python ports drew different faces for this name",
+      "palette": [[0, 0, 94], [101, 65, 56], [246, 75, 60]],
+      "grid": ["11011", "00200", "00000", "02120", "01210"]
+    },
+    {
+      "seed": "ΟΔΥΣΣΕΑΣ", "size": 5, "density": 52,
+      "note": "same story: language lower() functions disagree on final sigma",
+      "palette": [[0, 0, 94], [105, 65, 56], [250, 75, 60]],
+      "grid": ["11011", "00100", "02020", "10001", "01010"]
+    }
+  ]
+}
